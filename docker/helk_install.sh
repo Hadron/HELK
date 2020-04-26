@@ -156,6 +156,7 @@ check_system_info() {
     debian | raspbian)
       DIST_VERSION="$(sed 's/\/.*//' /etc/debian_version | sed 's/\..*//')"
       case "$DIST_VERSION" in
+      10) DIST_VERSION="bullseye" ;;
       9) DIST_VERSION="stretch" ;;
       8) DIST_VERSION="jessie" ;;
       7) DIST_VERSION="wheezy" ;;
