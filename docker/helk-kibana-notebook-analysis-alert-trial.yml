@@ -9,6 +9,7 @@ services:
       options:
         max-file: "9"
         max-size: "6m"
+    privileged: true
     secrets:
       - source: elasticsearch.yml
         target: /usr/share/elasticsearch/config/elasticsearch.yml
